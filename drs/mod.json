@@ -1,0 +1,9 @@
+{
+    "id": "drs",
+    "version": "1.0.0",
+    "authors": ["Valgo"],
+    "name": "Daniel's Random Stuff",
+    "description": "An assortment of ideas created for LBAL by me",
+    "dependencies": [],
+    "load-after": []
+}
