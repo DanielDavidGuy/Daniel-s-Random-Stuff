@@ -1,45 +1,26 @@
 extends Reference
 
+const mod_name : String = "drs"
+
+var added = [
+	"wood", "woodpecker", "stick", "tree", "fire", "fruit_tree", "lumberjack", "campfire",
+	"snow", "ice_block", "puddle", "snow_globe", "snowman", "penguin", "iceberg", "frosty",
+	"hat", "magic_hat", "easter_egg", "scarecrow", "rocket_ship", "everyman", "bag_of_chips",
+	"eagle", "angler_fish", "soil", "earth", "avatar", "flag", "landmine", "lawyer", "locksmith",
+	"trash_can", "recycle_bin", "pawn", "knight", "rook", "bishop", "king", "queen",
+	"jack", "card_king", "card_queen", "ace"
+]
+
+var updated = [
+	"dog", "rabbit", "magpie", "crow", "hooligan", "sun", "rain", "shiny_pebble", "key", "magic_key",
+	"hearts", "diamonds", "spades", "clubs", "joker"
+]
+
 func load(modloader: Reference, mod_info, tree: SceneTree):
-	modloader.add_mod_symbol("res://drs/symbols/Wood.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Woodpecker.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Stick.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Tree.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Fire.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Fruit_Tree.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Lumberjack.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Campfire.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Snow.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Ice_Block.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Puddle.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Snow_Globe.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Snowman.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Penguin.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Iceberg.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Hat.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Magic_Hat.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Frosty.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Easter_Egg.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Scarecrow.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Rocket_Ship.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Everyman.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Bag_of_Chips.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Eagle.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Angler_Fish.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Soil.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Earth.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Avatar.gd")
-	modloader.add_mod_symbol("res://drs/symbols/Flag.gd")
-#	modloader.add_mod_symbol("res://drs/symbols/Landmine.gd")
-#	modloader.add_mod_symbol("res://drs/symbols/Lawyer.gd")
-	modloader.add_symbol_patch("res://drs/symbols/patches/Dog.gd")
-	modloader.add_symbol_patch("res://drs/symbols/patches/Rabbit.gd")
-	modloader.add_symbol_patch("res://drs/symbols/patches/Magpie.gd")
-	modloader.add_symbol_patch("res://drs/symbols/patches/Crow.gd")
-	modloader.add_symbol_patch("res://drs/symbols/patches/Hooligan.gd")
-	modloader.add_symbol_patch("res://drs/symbols/patches/Sun.gd")
-	modloader.add_symbol_patch("res://drs/symbols/patches/Rain.gd")
-	modloader.add_symbol_patch("res://drs/symbols/patches/Shiny_Pebble.gd")
+	for i in added:
+		modloader.add_mod_symbol("res://" + mod_name + "/symbols/drs_" + i + ".gd")
+	for i in updated:
+		modloader.add_symbol_patch("res://" + mod_name + "/symbols/patches/" + i + ".gd")
 
 # func modify_starting_symbols(current):
-#	return []
+#	return ["lumberjack", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree"]
