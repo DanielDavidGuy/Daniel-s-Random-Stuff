@@ -1,5 +1,6 @@
 # Daniel-s-Random-Stuff
 Requires LuckyAPI v0.3.0
+
 Mod for LBAL including a bunch of symbols I had ideas for
 
 Featuring:
