@@ -9,7 +9,7 @@ func init(modloader: Reference, params):
 	self.value = 0
 	self.values = [12]
 	self.rarity = "common"
-	self.groups = ["food", "trash"]
+	self.groups = ["food"]
 	self.sfx = []
 	
 	self.texture = load_texture("res://drs/symbols/bag_of_chips.png")
