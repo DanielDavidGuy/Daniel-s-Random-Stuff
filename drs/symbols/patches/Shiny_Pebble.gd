@@ -6,4 +6,5 @@ func init(modloader: Reference, params):
 
 func patch_groups(groups):
     groups.push_back("earthbend")
+    groups.push_back("trash")
     return groups

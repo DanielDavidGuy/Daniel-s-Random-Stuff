@@ -9,12 +9,12 @@ func init(modloader: Reference, params):
 	self.value = 1
 	self.values = [4, 1, 2, 3]
 	self.rarity = "common"
-	self.groups = ["chesslower", "chess"]
+	self.groups = ["chesslower", "chess", "trash"]
 	self.sfx = ["matryoshka"]
 	
 	self.texture = load_texture("res://drs/symbols/pawn.png")
 	self.name = "Pawn"
-	self.description = "Gives <icon_coin><color_FBF236><value_1><end> more if its <color_E14A68>position<end> is <color_E14A68><value_2><end> or <color_E14A68><value_3><end> spaces directly above than its previous <color_E14A68>position<end>. Transforms into <all_or_pawnform> after having done this <color_E14A68><value_4><end> times."
+	self.description = "Gives <icon_coin><color_FBF236><value_1><end> more if its <color_E14A68>position<end> is <color_E14A68><value_2><end> or <color_E14A68><value_3><end> spaces directly above its previous <color_E14A68>position<end>. Transforms into <all_or_pawnform> after having done this <color_E14A68><value_4><end> times."
 
 func add_conditional_effects(symbol, adjacent):
 	var ver_condition = symbol.get_persistent_data("prev_y") - symbol.grid_position.y == values[1] or symbol.get_persistent_data("prev_y") - symbol.grid_position.y == values[2]

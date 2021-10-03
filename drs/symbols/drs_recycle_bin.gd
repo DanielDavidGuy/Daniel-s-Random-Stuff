@@ -14,19 +14,19 @@ func init(modloader: Reference, params):
 	
 	self.texture = load_texture("res://drs/symbols/recycle_bin.png")
 	self.name = "Recycle Bin"
-	self.description = "<color_E14A68>Destroys<end> an adjacent with a base value of <icon_coin><color_FBF236><value_2><end>. Gives <color_E14A68>1<icon_reroll_token><end> for every <color_E14A68><value_1><end> symbols <color_E14A68>destroyed<end>."
+	self.description = "<color_E14A68>Removes<end> an adjacent <all_or_trash>. Gives <color_E14A68>1<icon_reroll_token><end> for every <color_E14A68><value_1><end> symbols <color_E14A68>removed<end>."
 
 func add_conditional_effects(symbol, adjacent):
 	if not symbol.get_non_persistent_data("triggered"):
 		var targets = []
 		for i in adjacent:
-			if i.value == 1:
+			if i.groups.has("trash"):
 				targets.push_back(i)
 		if targets.size() > 0:
 			targets.shuffle()
 			symbol.set_non_persistent_data("triggered", 1)
 			symbol.add_effect(effect().add_to_persistent_data("trash", 1))
-			symbol.add_effect_for_symbol(targets[0], effect().set_destroyed().animate("bounce", 0, [symbol, targets[0]]))
+			symbol.add_effect_for_symbol(targets[0], effect().set_removed().animate("bounce", 0, [symbol, targets[0]]))
 	var n = symbol.get_persistent_data("trash")
 	var count := 0
 	while n >= values[0]:

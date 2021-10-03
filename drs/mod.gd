@@ -13,7 +13,8 @@ var added = [
 
 var updated = [
 	"dog", "rabbit", "magpie", "crow", "hooligan", "sun", "rain", "shiny_pebble", "key", "magic_key",
-	"hearts", "diamonds", "spades", "clubs", "joker"
+	"hearts", "diamonds", "spades", "clubs", "joker", "anchor", "banana_peel", "cherry", "coin",
+	"egg", "flower", "pearl"
 ]
 
 func load(modloader: Reference, mod_info, tree: SceneTree):
@@ -21,6 +22,3 @@ func load(modloader: Reference, mod_info, tree: SceneTree):
 		modloader.add_mod_symbol("res://" + mod_name + "/symbols/drs_" + i + ".gd")
 	for i in updated:
 		modloader.add_symbol_patch("res://" + mod_name + "/symbols/patches/" + i + ".gd")
-
-# func modify_starting_symbols(current):
-#	return ["lumberjack", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree", "wood", "tree", "fruit_tree"]
