@@ -25,7 +25,7 @@ func add_conditional_effects(symbol, adjacent):
 		if targets.size() > 0:
 			targets.shuffle()
 			symbol.set_non_persistent_data("triggered", 1)
-			symbol.add_effect(effect().add_to_persistent_data("trash", 1))
+			symbol.add_effect(effect().add_to_non_persistent_data("trash", 1))
 			symbol.add_effect_for_symbol(targets[0], effect().set_removed().animate("bounce", 0, [symbol, targets[0]]))
 	var n = symbol.get_persistent_data("trash")
 	var count := 0
