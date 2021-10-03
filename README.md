@@ -1,5 +1,6 @@
 # Daniel-s-Random-Stuff
-Requires LuckyAPI v0.3.0
+Requires Frosty67's LuckyAPI Dev Fork
+https://github.com/Fr0sty67/LuckyAPI/tree/dev
 
 Mod for LBAL including a bunch of symbols I had ideas for
 
