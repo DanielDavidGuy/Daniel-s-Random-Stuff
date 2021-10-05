@@ -9,7 +9,7 @@ func init(modloader: Reference, params):
     self.value = 1
     self.values = []
     self.rarity = "common"
-    self.groups = ["woodlikes", "doghates"]
+    self.groups = ["woodlikes", "doghates", "trash"]
     
     self.texture = load_texture("res://drs/symbols/stick.png")
     self.name = "Stick"

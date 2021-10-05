@@ -9,7 +9,7 @@ func init(modloader: Reference, params):
 	self.value = 1
 	self.values = [4, 1, 2, 3]
 	self.rarity = "common"
-	self.groups = ["chesslower", "chess", "trash"]
+	self.groups = ["chesslower", "chess"]
 	self.sfx = ["matryoshka"]
 	
 	self.texture = load_texture("res://drs/symbols/pawn.png")

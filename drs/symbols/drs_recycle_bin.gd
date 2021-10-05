@@ -7,7 +7,7 @@ func init(modloader: Reference, params):
 	
 	self.id = "recycle_bin"
 	self.value = 0
-	self.values = [3, 1]
+	self.values = [2, 1]
 	self.rarity = "uncommon"
 	self.groups = []
 	self.sfx = ["jump"]

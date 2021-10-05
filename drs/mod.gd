@@ -11,14 +11,42 @@ var added = [
 	"jack", "card_king", "card_queen", "ace"
 ]
 
+var regrouped = [
+	["scarebirds", [
+		"magpie", "crow"
+	]],
+	["key", [
+		"key", "magic_key"
+	]],
+	["redsuits", [
+		"hearts", "diamonds"
+	]],
+	["blacksuits", [
+		"clubs", "spades"
+	]],
+	["acelikes", [
+		"hearts", "diamonds", "spades", "clubs", "joker"
+	]],
+	["trash", [
+		"shiny_pebble", "key", "banana_peel", "egg", "pearl", "candy", "beer", "seed", "coin"
+	]],
+	["earthbend", [
+		"shiny_pebble"
+	]],
+	["waterbend", [
+		"rain"
+	]]
+]
+
 var updated = [
-	"dog", "rabbit", "magpie", "crow", "hooligan", "sun", "rain", "shiny_pebble", "key", "magic_key",
-	"hearts", "diamonds", "spades", "clubs", "joker", "anchor", "banana_peel", "cherry", "coin",
-	"egg", "flower", "pearl"
+	"dog", "rabbit", "hooligan", "sun", "joker"
 ]
 
 func load(modloader: Reference, mod_info, tree: SceneTree):
 	for i in added:
 		modloader.add_mod_symbol("res://" + mod_name + "/symbols/drs_" + i + ".gd")
+	for i in regrouped:
+		for j in i[1]:
+			modloader.add_symbol_patch("res://" + mod_name + "/symbols/patches/Group.gd", {"id": j, "group": i[0]})
 	for i in updated:
 		modloader.add_symbol_patch("res://" + mod_name + "/symbols/patches/" + i + ".gd")

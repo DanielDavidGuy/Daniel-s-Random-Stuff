@@ -4,10 +4,6 @@ func init(modloader: Reference, params):
 	self.modloader = modloader
 	self.id = "joker"
 
-func patch_groups(groups):
-	groups.push_back("acelikes")
-	return groups
-
 func patch_description(description):
 	return join(description, "Adjacent <all_and_jokerlikes> also give <color_E14A68>2x<end> more <icon_coin>.")
 
