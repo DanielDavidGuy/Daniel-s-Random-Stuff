@@ -1,6 +1,9 @@
 # Daniel-s-Random-Stuff
-Requires Frosty67's LuckyAPI Dev Fork
+Requires Frosty67's LuckyAPI Dev Fork and Effect Builder Plugin
+
 https://github.com/Fr0sty67/LuckyAPI/tree/dev
+
+https://github.com/Fr0sty67/EffectBuilderPlugin/releases/tag/1.2.5
 
 Mod for LBAL including a bunch of symbols I had ideas for
 
