@@ -7,7 +7,7 @@ func init(modloader: Reference, params):
 	
 	self.id = "ace"
 	self.value = 4
-	self.values = [1.3]
+	self.values = [1.5]
 	self.rarity = "very_rare"
 	self.groups = ["jokerlikes"]
 	self.sfx = []
@@ -18,4 +18,4 @@ func init(modloader: Reference, params):
 
 func add_conditional_effects(symbol, adjacent):
 	var cards := count_symbols("reels", {"group": "acelikes"})
-	symbol.add_effect(effect().change_value_bonus((values[0] * cards)))
+	symbol.add_effect(effect().change_value_multiplier(pow(values[0], cards)))
